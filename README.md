@@ -1,5 +1,5 @@
 # Règles importantes
-1. **NE JAMAIS FAIRE " git add * " ou je vous défonce puis je vous tire une balle!**
+1. **NE JAMAIS FAIRE " git add * "**
 2. Avant de faire quoi que ce soit, suivre les sections **Créer un répertoire local** et **Premier pas** dans l'ordre!
 3. Ne faites **AUCUN** changement dans la configuration du git (par exemple: le .gitignore) sans en avoir parlé à l'équipe entière et avoir son approbation (Vu que c'est Vincent qui gère le git, je dis qu'il a le dernier mot)!
 6. Si vous avez des questions par rapport au git et rien d'autre, contactez Vincent Lamy!
