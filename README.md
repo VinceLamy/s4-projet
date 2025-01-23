@@ -16,7 +16,7 @@
 # Utilisation de Github Desktop
 1. Dans Github Desktop, lorsque vous ajouter un nouveau répertoire, sélectionner "Ajouter un répertoire existant"
 > IMPORTANT : Ne clonez pas le projet à partir de Github car il peut y avoir des problème avec Vivacon
-3. Allez chercher le répertoire précédemment créé "s4-projet"
+2. Allez chercher le répertoire précédemment créé "s4-projet"
 
 
 # Commandes utiles
