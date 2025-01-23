@@ -6,7 +6,7 @@
 
 # Créer un répertoire local
 1. Ouvrir le terminal de commande dans un dossier pour le projet (Pas besoin de créer un dossier root pour le projet, Git s'en occupe)
-2. Copier-coller la commande suivante : 
+2. Copier-coller la commande suivante : git clone https://github.com/VinceLamy/s4-projet.git
 
 # Premiers pas
 1. Créer un projet Vivado que vous nommé "s4-projet-vivado" dans le dossier "s4-projet"
