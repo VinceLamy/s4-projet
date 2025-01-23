@@ -12,12 +12,17 @@
 1. Créez un projet Vivado que vous nommez "s4-projet-vivado" dans le dossier "s4-projet"
 2. Assurez vous d'importer les fichiers du Git dans les bonnes sections de Vivado
 3. Si vous voulez utiliser Github Desktop, voir la section **Utilisation de Github Desktop**
+4. Créez vous une branche (voir la section **Création de branches**
 
 # Utilisation de Github Desktop
 1. Dans Github Desktop, lorsque vous ajouter un nouveau répertoire, sélectionner "Ajouter un répertoire existant"
 > IMPORTANT : Ne clonez pas le projet à partir de Github car il peut y avoir des problème avec Vivacon
 2. Allez chercher le répertoire précédemment créé "s4-projet"
 
+# Création de branches
+Lorsque vous vous créer une branche, donnez lui un nom significatif en suivant le modèle suivant :
+Modèle : Prénom-NomDeLaFonctionnalité (Tout est en minuscule et en anglais)
+Exemple : vincent-character
 
 # Commandes utiles
 
