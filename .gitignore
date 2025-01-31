@@ -1,4 +1,5 @@
 *
-**/.cpp
-**/.h
-**/.hpp
+
+##pas ignorer ces fichiers là
+!c_code*
+!c_code/**
