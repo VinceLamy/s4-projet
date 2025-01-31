@@ -19,7 +19,7 @@ struct Sprite
     struct Coordonate* coordinate;
 
     //methodes
-    void (*move)(struct Sprite* self);
+
     char** (*toString)(struct Sprite* self);
 
 };
@@ -27,7 +27,7 @@ struct Sprite
 struct Sprite* __init_Sprite__(int velocity);
 void __free_Sprite__(struct Sprite* self);
 
-void move(struct Sprite* self);
+
 char** toString(struct Sprite* self);
 
 

@@ -7,7 +7,6 @@ struct Coordonate* __init_Coordonate__()
     
     if (newCoordonate != NULL)
     {
-        newCoordonate->move = move;
         newCoordonate->setCoordonates = setCoordonates;
         newCoordonate->reset = reset;
         newCoordonate->setCoordonates(newCoordonate, 0, 0);
@@ -28,26 +27,7 @@ void setCoordonates(struct Coordonate* self, int x, int y)
     self->y = y;
 }
 
-void move(struct Coordonate* self, enum Direction direction, int velocity)
-{
-    switch (direction)
-    {
-        case UP:
-            self->y += velocity;
-            break;
-        case RIGHT:
-            self->x += velocity;
-            break;
-        case DOWN:
-            self->y -= velocity;
-            break;
-        case LEFT:
-            self->x -= velocity;
-            break;
-        default:
-            break;
-    }
-}
+
 
 
 
