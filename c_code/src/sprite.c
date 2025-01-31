@@ -14,7 +14,10 @@ struct Sprite* __init_Sprite__(int velocity)
 };
 
 
-void __free_Sprite__(struct Sprite* self);
+void __free_Sprite__(struct Sprite* self)
+{
+    free(self);
+}
 
 
 void move(struct Sprite* self)
