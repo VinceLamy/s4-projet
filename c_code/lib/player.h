@@ -14,13 +14,14 @@ struct Player
 
 
     //methodes
-    void (*move)(struct Player*);
+    void (*move)(struct Player*, enum Direction direction);
+    void (*handleGettingHit_Player)
 };
 
 
-struct Player* __init_Player__(int health, int image, int priority, bool isAlive, int shootingSpeed, int velocity);
+struct Player* __init_Player__();
 void __free_Player__(struct Player* self);
-void move(struct Player* self, enum Direction direction);
+void move_Player(struct Player* self, enum Direction direction);
     
 
 

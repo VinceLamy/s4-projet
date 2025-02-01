@@ -15,20 +15,19 @@ struct Sprite
 {
 
     //attributs
-    int velocity; //en pixel par itération
     struct Coordonate* coordinate;
 
-    //methodes
+    //methodes du struct
+    char** (*__str_Sprite__)(struct Sprite* self);
 
-    char** (*toString)(struct Sprite* self);
 
 };
 
-struct Sprite* __init_Sprite__(int velocity);
+struct Sprite* __init_Sprite__();
 void __free_Sprite__(struct Sprite* self);
+char** __str_Sprite__(struct Sprite* self);
 
 
-char** toString(struct Sprite* self);
 
 
 

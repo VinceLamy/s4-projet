@@ -1,13 +1,13 @@
 #include "../lib/player.h"
 
+struct Settings settings;
 
 
-
-struct Player* __init_Player__(int health, int image, int priority, bool isAlive, int shootingSpeed, int velocity)
+struct Player* __init_Player__()
 {
     struct Player* newPlayer = (struct Player*)malloc(sizeof(struct Player));
 
-    newPlayer->entity = __init_Entity__(health, image, priority, isAlive, shootingSpeed, velocity);
+    newPlayer->entity = __init_Entity__(HEALTH_PLAYER, IMAGES_PLAYER, PRIORITY_PLAYER, true, SHOOTINGSPEED_PLAYER, VELOCITY_PLAYER);
 }
 
 void __free_Player__(struct Player* self)
@@ -17,7 +17,7 @@ void __free_Player__(struct Player* self)
 }
 
 
-void move(struct Player* self, enum Direction direction)
+void move_Player(struct Player* self, enum Direction direction)
 {
-    if(direction == RIGHT || direction == LEFT) self->entity->move(direction);
+    if(direction == RIGHT || direction == LEFT) self->entity->move_Entity(self->entity, direction);
 }

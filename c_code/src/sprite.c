@@ -3,12 +3,11 @@
 
 
 
-struct Sprite* __init_Sprite__(int velocity)
+struct Sprite* __init_Sprite__()
 {
     struct Sprite* newSprite = (struct Sprite*)malloc(sizeof(struct Sprite));
-    newSprite->velocity = velocity;
     newSprite->coordinate = __init_Coordonate__();
-    newSprite->toString = toString;
+    newSprite->__str_Sprite__ = __str_Sprite__;
 
 };
 
@@ -21,7 +20,7 @@ void __free_Sprite__(struct Sprite* self)
 
 
 
-char** toString()
+char** __str_Sprite__(struct Sprite* self)
 {
     return "to complete";
 }

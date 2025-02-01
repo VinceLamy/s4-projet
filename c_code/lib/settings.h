@@ -1,0 +1,34 @@
+
+
+
+#ifndef SETTINGS_H
+#define SETTINGS_H
+
+
+// Velocité des objets
+int VELOCITY_BULLETS = 2;
+int VELOCITY_PLAYER = 1;
+int VELOCITY_ENEMIES = 1;
+
+char** IMAGES_BULLETS = "o";
+char** IMAGES_PLAYER = "P";
+char** IMAGES_ENEMIES = "X";
+
+int PRIORITY_BULLETS = 1;
+int PRIORITY_PLAYER = 1;
+int PRIORITY_ENEMIES = 1;
+
+int SHOOTINGSPEED_BULLETS = 0;
+int SHOOTINGSPEED_PLAYER = 0;
+int SHOOTINGSPEED_ENEMIES = 1;
+
+int HEALTH_BULLETS = 1;
+int HEALTH_PLAYER = 5;
+int HEALTH_ENEMIES = 1;
+
+
+
+
+
+
+#endif
