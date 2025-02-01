@@ -1,13 +1,7 @@
 #include "../lib/entity.h"
 
 
-enum Direction
-{
-    UP = 0,
-    RIGHT = 1,
-    DOWN = 2,
-    LEFT = 3
-};
+
 
 struct Entity* __init_Entity__(int health, int image, int priority, bool isAlive, int shootingSpeed, int velocity)
 {
@@ -27,9 +21,10 @@ struct Entity* __init_Entity__(int health, int image, int priority, bool isAlive
     return entity;
 }
 
-void __free_Entity__(struct Entity* entity)
+void __free_Entity__(struct Entity* self)
 {
-    free(entity);
+    __free_Sprite__(self->sprite);
+    free(self);
 }
 
 void handleGettingHit(struct Entity* self)

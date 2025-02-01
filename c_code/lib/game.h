@@ -13,7 +13,7 @@ struct Game
     int spawnRate; //en delais avant un spawn
     int score;
 
-    Player* player;
+    struct Player* player;
 
     //methodes
 

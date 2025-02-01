@@ -15,6 +15,7 @@ struct Sprite* __init_Sprite__(int velocity)
 
 void __free_Sprite__(struct Sprite* self)
 {
+    __free_Coordonate__(self->coordinate);
     free(self);
 }
 
