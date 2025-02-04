@@ -9,6 +9,8 @@ struct Sprite* __init_Sprite__()
     newSprite->coordinate = __init_Coordonate__();
     newSprite->__str_Sprite__ = __str_Sprite__;
 
+    return newSprite;
+
 };
 
 
@@ -20,7 +22,7 @@ void __free_Sprite__(struct Sprite* self)
 
 
 
-char** __str_Sprite__(struct Sprite* self)
+char* __str_Sprite__(struct Sprite* self)
 {
     return "to complete";
 }

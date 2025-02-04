@@ -1,6 +1,6 @@
 #include "../lib/player.h"
 
-struct Settings settings;
+
 
 
 struct Player* __init_Player__()
@@ -8,6 +8,8 @@ struct Player* __init_Player__()
     struct Player* newPlayer = (struct Player*)malloc(sizeof(struct Player));
 
     newPlayer->entity = __init_Entity__(HEALTH_PLAYER, IMAGES_PLAYER, PRIORITY_PLAYER, true, SHOOTINGSPEED_PLAYER, VELOCITY_PLAYER);
+
+    return newPlayer;
 }
 
 void __free_Player__(struct Player* self)

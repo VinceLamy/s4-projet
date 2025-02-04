@@ -2,4 +2,6 @@
 
 ##pas ignorer ces fichiers là
 !c_code*
-!c_code/**
+!c_code/lib/*
+!c_code/src/*
+

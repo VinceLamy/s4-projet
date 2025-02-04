@@ -15,6 +15,25 @@ struct Coordonate* __init_Coordonate__()
 
 };
 
+void incrementCoordonate(struct Coordonate* self, enum Direction direction)
+{
+    switch (direction)
+    {
+        case UP:
+            self->y++;
+            break;
+        case DOWN:
+            self->y--;
+            break;
+        case LEFT:
+            self->x--;
+            break;
+        case RIGHT:
+            self->x++;
+            break;
+    }
+}
+
 
 void __free_Coordonate__(struct Coordonate* self)
 {

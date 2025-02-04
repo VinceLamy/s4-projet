@@ -3,7 +3,7 @@
 
 
 
-struct Entity* __init_Entity__(int health, int image, int priority, bool isAlive, int shootingSpeed, int velocity)
+struct Entity* __init_Entity__(int health, char* image, int priority, bool isAlive, int shootingSpeed, int velocity)
 {
     struct Entity* entity = (struct Entity*)malloc(sizeof(struct Entity));
     if (entity != NULL)
@@ -28,7 +28,7 @@ void __free_Entity__(struct Entity* self)
     free(self);
 }
 
-char** __str_Entity__(struct Entity* self)
+char* __str_Entity__(struct Entity* self)
 {
     return "to complete";
 }
@@ -39,7 +39,7 @@ void handleGettingHit(struct Entity* self)
     else self->health = 0;
 }
 
-void move_Entity(struct Entity* self, enum Direction direction, int velocity)
+void move_Entity(struct Entity* self, enum Direction direction)
 {
     self->sprite->coordinate->incrementCoordonate(self->sprite->coordinate, direction);
 }

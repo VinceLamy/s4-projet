@@ -15,7 +15,7 @@ struct Player
 
     //methodes
     void (*move)(struct Player*, enum Direction direction);
-    void (*handleGettingHit_Player)
+    void (*handleGettingHit_Player);
 };
 
 

@@ -4,6 +4,7 @@
 
 #include "includeLib.h"
 #include "player.h"
+#include "map.h"
 
 struct Game
 {
@@ -15,6 +16,8 @@ struct Game
 
     struct Player* player;
 
+    struct Map * map;
+
     //methodes
 
 
@@ -22,9 +25,9 @@ struct Game
 
 };
 
-struct Game* __init_Game__(int spawnRate);
-void __free_Game__();
-void startGame();
+struct Game* __init_Game__();
+void __free_Game__(struct Game* self);
+
 
 
 

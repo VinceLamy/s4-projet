@@ -10,9 +10,9 @@ int VELOCITY_BULLETS = 2;
 int VELOCITY_PLAYER = 1;
 int VELOCITY_ENEMIES = 1;
 
-char** IMAGES_BULLETS = "o";
-char** IMAGES_PLAYER = "P";
-char** IMAGES_ENEMIES = "X";
+char* IMAGES_BULLETS = "o";
+char* IMAGES_PLAYER = "P";
+char* IMAGES_ENEMIES = "X";
 
 int PRIORITY_BULLETS = 1;
 int PRIORITY_PLAYER = 1;
@@ -25,6 +25,11 @@ int SHOOTINGSPEED_ENEMIES = 1;
 int HEALTH_BULLETS = 1;
 int HEALTH_PLAYER = 5;
 int HEALTH_ENEMIES = 1;
+
+int N_COLS = 32;
+int N_ROWS = 30;
+
+int SPAWNRATE = 1;
 
 
 
