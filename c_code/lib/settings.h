@@ -1,39 +1,30 @@
-
-
-
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
+// Déclaration des variables globales
+extern int VELOCITY_BULLETS;
+extern int VELOCITY_PLAYER;
+extern int VELOCITY_ENEMIES;
 
-// Velocité des objets
-int VELOCITY_BULLETS = 2;
-int VELOCITY_PLAYER = 1;
-int VELOCITY_ENEMIES = 1;
+extern char* IMAGES_BULLETS;
+extern char* IMAGES_PLAYER;
+extern char* IMAGES_ENEMIES;
 
-char* IMAGES_BULLETS = "o";
-char* IMAGES_PLAYER = "P";
-char* IMAGES_ENEMIES = "X";
+extern int PRIORITY_BULLETS;
+extern int PRIORITY_PLAYER;
+extern int PRIORITY_ENEMIES;
 
-int PRIORITY_BULLETS = 1;
-int PRIORITY_PLAYER = 1;
-int PRIORITY_ENEMIES = 1;
+extern int SHOOTINGSPEED_BULLETS;
+extern int SHOOTINGSPEED_PLAYER;
+extern int SHOOTINGSPEED_ENEMIES;
 
-int SHOOTINGSPEED_BULLETS = 0;
-int SHOOTINGSPEED_PLAYER = 0;
-int SHOOTINGSPEED_ENEMIES = 1;
+extern int HEALTH_BULLETS;
+extern int HEALTH_PLAYER;
+extern int HEALTH_ENEMIES;
 
-int HEALTH_BULLETS = 1;
-int HEALTH_PLAYER = 5;
-int HEALTH_ENEMIES = 1;
+extern int N_COLS;
+extern int N_ROWS;
 
-int N_COLS = 32;
-int N_ROWS = 30;
+extern int SPAWNRATE;
 
-int SPAWNRATE = 1;
-
-
-
-
-
-
-#endif
+#endif // SETTINGS_H

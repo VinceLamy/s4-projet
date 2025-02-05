@@ -1,7 +1,14 @@
+# Ignorer tous les fichiers par défaut
 *
 
-##pas ignorer ces fichiers là
-!c_code*
-!c_code/lib/*
-!c_code/src/*
+# Ne pas ignorer les répertoires c_code, lib et src
+!c_code/
+!c_code/lib/
+!c_code/src/
 
+# Ne pas ignorer tous les fichiers dans les répertoires lib et src
+!c_code/lib/**
+!c_code/src/**
+
+# Ne pas ignorer le Makefile
+!c_code/Makefile

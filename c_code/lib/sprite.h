@@ -18,7 +18,7 @@ struct Sprite
     struct Coordonate* coordinate;
 
     //methodes du struct
-    char** (*__str_Sprite__)(struct Sprite* self);
+    char* (*__str_Sprite__)(struct Sprite* self);
 
 
 };
