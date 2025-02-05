@@ -3,10 +3,10 @@
 
 # Compilateur et options
 CC = gcc
-CFLAGS = -Wall -Wextra -Ilib
+CFLAGS = -Wall -Wextra -Ilib -g
 
 # Cibles
-main : main.o game.o player.o map.o entity.o sprite.o coordonate.o cell.o
+main : main.o game.o player.o map.o entity.o sprite.o coordonate.o cell.o settings.o
 	$(CC) -o main main.o game.o player.o map.o entity.o sprite.o coordonate.o cell.o settings.o
 
 main.o : src/main.c lib/main.h lib/game.h lib/includeLib.h

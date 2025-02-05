@@ -6,19 +6,21 @@
 struct Entity* __init_Entity__(int health, char* image, int priority, bool isAlive, int shootingSpeed, int velocity)
 {
     struct Entity* entity = (struct Entity*)malloc(sizeof(struct Entity));
-    if (entity != NULL)
-    {
-        entity->sprite = __init_Sprite__();
-        entity->velocity = velocity;
-        entity->shootingSpeed = shootingSpeed; 
-        entity->health = health;
-        entity->image = image;
-        entity->priority = priority;
-        entity->isAlive = isAlive;
-        entity->handleGettingHit = handleGettingHit; // Initialisation du pointeur de fonction
-        entity->move_Entity = move_Entity;
-
+    if (entity == NULL) {
+        fprintf(stderr, "Failed to allocate memory for Entity\n");
+        exit(EXIT_FAILURE);
     }
+
+    entity->sprite = __init_Sprite__();
+    entity->velocity = velocity;
+    entity->shootingSpeed = shootingSpeed; 
+    entity->health = health;
+    entity->image = image;
+    entity->priority = priority;
+    entity->isAlive = isAlive;
+    entity->handleGettingHit = handleGettingHit; // Initialisation du pointeur de fonction
+    entity->move_Entity = move_Entity;
+
     return entity;
 }
 

@@ -1,14 +1,10 @@
 #include "../lib/main.h"
-
-
-
-
-
+#include "../lib/map.h"
 
 int main()
 {
-
-    struct Game* game = __init_Game__();
-
-
+    struct Map* map = __init_Map__();
+    //__str_Map__(map);
+    //__free_Map__(map); // Free the allocated memory before exiting
+    return 0;
 }

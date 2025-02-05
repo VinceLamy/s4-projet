@@ -5,6 +5,10 @@
 struct Game* __init_Game__()
 {
     struct Game* newGame = (struct Game*)malloc(sizeof(struct Game));
+    if (newGame == NULL) {
+        fprintf(stderr, "Failed to allocate memory for Game\n");
+        exit(EXIT_FAILURE);
+    }
     
     newGame->map = __init_Map__();
     newGame->spawnRate = SPAWNRATE;

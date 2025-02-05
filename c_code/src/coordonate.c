@@ -4,13 +4,15 @@
 struct Coordonate* __init_Coordonate__()
 {
     struct Coordonate* newCoordonate = (struct Coordonate*)malloc(sizeof(struct Coordonate));
-    
-    if (newCoordonate != NULL)
-    {
-        newCoordonate->setCoordonates = setCoordonates;
-        newCoordonate->reset = reset;
-        newCoordonate->setCoordonates(newCoordonate, 0, 0);
+    if (newCoordonate == NULL) {
+        fprintf(stderr, "Failed to allocate memory for Coordonate\n");
+        exit(EXIT_FAILURE);
     }
+
+    newCoordonate->setCoordonates = setCoordonates;
+    newCoordonate->reset = reset;
+    newCoordonate->setCoordonates(newCoordonate, 0, 0);
+
     return newCoordonate;
 
 };
