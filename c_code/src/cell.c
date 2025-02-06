@@ -17,7 +17,6 @@ struct Cell* __init_Cell__(char* image, struct Cell* cell_north, struct Cell* ce
 
 
     newCell->set_ImageCell = set_ImageCell;
-    newCell->set_defaultImageCell = set_defaultImageCell;
     newCell->get_cellInDirectionX = get_cellInDirectionX;
     newCell->reset_Image = reset_Image;
     newCell->enterCell = enterCell;
@@ -62,18 +61,6 @@ void set_ImageCell(struct Cell* self, char* image)
     }
 }
 
-void set_defaultImageCell(struct Cell* self, char* image)
-{
-
-    if (self->defaultImage != NULL) {
-        free(self->image); // Libérer l'ancienne image si nécessaire
-    }
-
-    self->defaultImage = (char*)malloc((strlen(image) + 1) * sizeof(char));
-
-    strcpy(self->image, image);
-
-}
 
 struct Cell* get_cellInDirectionX(struct Cell* self, enum Direction direction)
 {

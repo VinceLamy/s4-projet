@@ -2,7 +2,7 @@
 
 struct Settings settings;
 
-struct Bullet* __init_Bullet()
+struct Bullet* __init_Bullet(struct Cell* cell)
 {
     struct Bullet* newBullet = (struct Bullet*)malloc(sizeof(struct Bullet));
     if (newBullet == NULL) {
@@ -10,7 +10,7 @@ struct Bullet* __init_Bullet()
         exit(EXIT_FAILURE);
     }
 
-    newBullet->entity = __init_Entity__(HEALTH_BULLETS , IMAGES_BULLETS, PRIORITY_BULLETS, true, SHOOTINGSPEED_BULLETS, VELOCITY_BULLETS);
+    newBullet->entity = __init_Entity__(cell, HEALTH_BULLETS , IMAGES_BULLETS, PRIORITY_BULLETS, true, SHOOTINGSPEED_BULLETS, VELOCITY_BULLETS);
 
     return newBullet;
 }
