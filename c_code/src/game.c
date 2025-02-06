@@ -16,6 +16,7 @@ struct Game* __init_Game__()
 
     struct Cell* initialPlayerCell = newGame->map->matrix[INITIAL_PLAYERPOSITION[0]][INITIAL_PLAYERPOSITION[1]];
     newGame->player = __init_Player__(initialPlayerCell);
+    newGame->startGame = startGame;
 
 
     __str_Map__(newGame->map);
@@ -28,5 +29,48 @@ void __free_Game__(struct Game* self)
     __free_Map__(self->map);
     __free_Player__(self->player);
     free(self);
+}
+
+void startGame(struct Game* self)
+{   
+    struct timespec req = {0};
+    req.tv_sec = 0; // 1 seconde
+    req.tv_nsec = 50000000L; // 50 millisecondes (0,5 seconde)
+
+    system("clear");
+    struct Controller* controller = __init_Controller__();
+    struct Player* player = self->player;
+    
+
+    enum Direction direction;
+
+    system("clear");
+    clear();
+    __str_Map__(self->map);
+    while(!controller->quit)
+    {
+
+        controller->updateMovement(controller);
+        if(controller->up || controller->right || controller->down || controller->left)
+        {
+            if(controller->up) player->move_Player(player, UP);
+            if(controller->right) player->move_Player(player, RIGHT);
+            if(controller->down) player->move_Player(player, DOWN);
+            if(controller->left) player->move_Player(player, LEFT);
+
+            system("clear");
+            clear();
+            __str_Map__(self->map);
+        }
+
+
+        nanosleep(&req, (struct timespec *)NULL);
+
+
+
+    }
+        
+        
+        
 }
 

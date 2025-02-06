@@ -10,6 +10,7 @@
 #include <time.h> // Pour nanosleep
 #include "util.h"
 #include "settings.h"
+#include <ncurses.h>
 
 
 #endif

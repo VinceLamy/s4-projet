@@ -63,9 +63,10 @@ void __str_Map__(struct Map* map)
 {
     for (int i = 0; i < map->rows; i++) {
         for (int j = 0; j < map->cols; j++) {
-            printf("%s ", __str_Cell__(map->matrix[i][j]));
+            printw("%s ", __str_Cell__(map->matrix[i][j]));
         }
-        printf("\n");
+        printw("\n");
     }
+    refresh();
 }
 

@@ -3,6 +3,7 @@
 #define GAME_H
 
 #include "includeLib.h"
+#include "controller.h"
 #include "player.h"
 #include "map.h"
 
@@ -19,7 +20,7 @@ struct Game
     struct Map * map;
 
     //methodes
-
+    void (*startGame)(struct Game* self);
 
 
 
@@ -27,6 +28,7 @@ struct Game
 
 struct Game* __init_Game__();
 void __free_Game__(struct Game* self);
+void startGame(struct Game* self);
 
 
 

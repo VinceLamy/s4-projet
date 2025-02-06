@@ -43,4 +43,5 @@ void set_ImagePlayer(struct Player* self, char* image)
 {
 
     self->entity->set_ImageEntity(self->entity, image);
+
 }
