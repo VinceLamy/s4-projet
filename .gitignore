@@ -12,3 +12,5 @@
 
 # Ne pas ignorer le Makefile
 !c_code/Makefile
+
+!c_code/README.md

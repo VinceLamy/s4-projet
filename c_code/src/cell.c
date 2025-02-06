@@ -20,6 +20,7 @@ struct Cell* __init_Cell__(char* image, struct Cell* cell_north, struct Cell* ce
     newCell->get_cellInDirectionX = get_cellInDirectionX;
     newCell->reset_Image = reset_Image;
     newCell->enterCell = enterCell;
+
     
     newCell->set_ImageCell(newCell, image);
 
