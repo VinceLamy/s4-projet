@@ -29,4 +29,6 @@ extern int SPAWNRATE;
 
 extern char INITIAL_MAP[11][10];
 
+extern int INITIAL_PLAYERPOSITION[2];
+
 #endif // SETTINGS_H

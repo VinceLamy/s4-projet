@@ -14,7 +14,8 @@ struct Game* __init_Game__()
     newGame->spawnRate = SPAWNRATE;
     newGame->score = 0;
 
-    newGame->player = __init_Player__();
+    struct Cell* initialPlayerCell = newGame->map->matrix[INITIAL_PLAYERPOSITION[0]][INITIAL_PLAYERPOSITION[1]];
+    newGame->player = __init_Player__(initialPlayerCell);
 
 
     __str_Map__(newGame->map);

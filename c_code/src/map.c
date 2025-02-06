@@ -17,7 +17,7 @@ struct Map* __init_Map__()
         newMap->matrix[i] = (struct Cell**)malloc(N_COLS * sizeof(struct Cell*));
         for (int j = 0; j < N_COLS; j++) {
             char *img = (char*)malloc(20 * sizeof(char)); // Allouer de la mémoire pour img
-            sprintf(img, INITIAL_MAP[i][j]);
+            sprintf(img, "%c", INITIAL_MAP[i][j]);
             newMap->matrix[i][j] = __init_Cell__(img, NULL, NULL, NULL, NULL);
 
         }

@@ -4,12 +4,13 @@
 # Compilateur et options
 CC = gcc
 CFLAGS = -Wall -Wextra -Ilib -g
+LDFLAGS = -lncurses
 
 # Cibles
-main : main.o game.o player.o map.o entity.o sprite.o coordonate.o cell.o settings.o joystick.o
-	$(CC) -o main main.o game.o player.o map.o entity.o sprite.o coordonate.o cell.o settings.o joystick.o
+main : main.o game.o player.o map.o entity.o sprite.o coordonate.o cell.o settings.o controller.o
+	$(CC) -o main main.o game.o player.o map.o entity.o sprite.o coordonate.o cell.o settings.o controller.o
 
-main.o : src/main.c lib/main.h lib/game.h lib/includeLib.h
+main.o : src/main.c lib/main.h lib/game.h lib/includeLib.h lib/controller.h
 	$(CC) $(CFLAGS) -c src/main.c
 
 game.o : src/game.c lib/game.h lib/player.h lib/map.h lib/includeLib.h
@@ -36,8 +37,8 @@ cell.o : src/cell.c lib/cell.h lib/includeLib.h
 settings.o : src/settings.c lib/settings.h
 	$(CC) $(CFLAGS) -c src/settings.c
 
-joystick.o : src/joystick.c lib/joystick.h
-	$(CC) $(CFLAGS) -c src/joystick.c
+controller.o : src/controller.c lib/controller.h
+	$(CC) $(CFLAGS) -c src/controller.c
 
 lib/includeLib.h : lib/settings.h lib/util.h
 	touch lib/includeLib.h
