@@ -27,4 +27,6 @@ extern int N_ROWS;
 
 extern int SPAWNRATE;
 
+extern char INITIAL_MAP[11][10];
+
 #endif // SETTINGS_H

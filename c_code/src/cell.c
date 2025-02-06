@@ -17,12 +17,8 @@ struct Cell* __init_Cell__(char* image, struct Cell* cell_north, struct Cell* ce
 
 
     // Allouer de la mémoire pour l'image et copier l'image
+    
     newCell->image = (char*)malloc((strlen(image) + 1) * sizeof(char));
-    if (newCell->image == NULL) {
-        fprintf(stderr, "Failed to allocate memory for Cell image\n");
-        free(newCell);
-        exit(EXIT_FAILURE);
-    }
 
     strcpy(newCell->image, image);
 
@@ -41,18 +37,14 @@ char* __str_Cell__(struct Cell* self)
     return self->image;
 }
 
-void set_Image(struct Cell* self, char * image)
+void set_Image(struct Cell* self, char* image)
 {
 
-    free(self->set_Image);
-
-    // Allouer de la mémoire pour l'image et copier l'image
-    self->image = (char*)malloc((strlen(image) + 1) * sizeof(char));
-    if (self->image == NULL) {
-        fprintf(stderr, "Failed to allocate memory for Cell image\n");
-        exit(EXIT_FAILURE);
+    if (self->image != NULL) {
+        free(self->image); // Libérer l'ancienne image si nécessaire
     }
 
-    strcpy(self->image, image);
+    self->image = (char*)malloc((strlen(image) + 1) * sizeof(char));
 
+    strcpy(self->image, image);
 }
