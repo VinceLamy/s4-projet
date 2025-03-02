@@ -1,16 +1,20 @@
 # Ignorer tous les fichiers par défaut
 *
 
+!vitis/
+!vitis/*
+!vivado
+
 # Ne pas ignorer les répertoires c_code, lib et src
-!c_code/
-!c_code/lib/
-!c_code/src/
+!vitis/c_code/
+!vitis/c_code/lib/
+!vitis/c_code/src/
 
 # Ne pas ignorer tous les fichiers dans les répertoires lib et src
-!c_code/lib/**
-!c_code/src/**
+!vitis/c_code/lib/**
+!vitis/c_code/src/**
 
 # Ne pas ignorer le Makefile
-!c_code/Makefile
+!vitis/c_code/Makefile
 
-!c_code/README.md
+!vitis/c_code/README.md
