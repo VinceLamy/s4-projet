@@ -22,7 +22,7 @@ struct Map* __init_Map__()
             else
             {
                 int random_number_0_99 = rand() % 100;
-                if(random_number_0_99 >= 0 && random_number_0_99 <= 10) *img = '*';
+                if(random_number_0_99 >= 0 && random_number_0_99 <= 5) *img = '*';
                 else *img = ' ';
 
             }
@@ -74,7 +74,7 @@ void __str_Map__(struct Map* map)
     for (int i = 0; i < map->rows; i++) {
         for (int j = 0; j < map->cols; j++) {
             if(DEBUG_MODE == 0)printw("%s ", __str_Cell__(map->matrix[i][j]));
-            else printf("%s ", __str_Cell__(map->matrix[i][j]))
+            else printf("%s ", __str_Cell__(map->matrix[i][j]));
             
         }
         if(DEBUG_MODE == 0)printw("\n");

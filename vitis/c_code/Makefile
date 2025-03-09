@@ -44,7 +44,7 @@ controller.o : src/controller.c lib/controller.h
 	$(CC) $(CFLAGS) -c src/controller.c $(LDFLAGS)
 
 lib/includeLib.h : lib/settings.h lib/util.h
-	touch lib/includeLib.h $(LDFLAGS)
+	touch lib/includeLib.
 
 run:
 	make clean

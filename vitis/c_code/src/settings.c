@@ -1,6 +1,6 @@
 #include "settings.h"
 
-int DEBUG_MODE = 1;
+int DEBUG_MODE = 0;
 
 // Définition des variables globales
 int VELOCITY_BULLETS = 2;
@@ -23,12 +23,12 @@ int HEALTH_BULLETS = 1;
 int HEALTH_PLAYER = 5;
 int HEALTH_ENEMIES = 1;
 
-int N_ROWS = 11;
-int N_COLS = 10;
+int N_ROWS = 20;
+int N_COLS = 20;
 
 
 
-char INITIAL_MAP[11][10] = {
+/**har INITIAL_MAP[11][10] = {
     {'|',' ',' ',' ',' ',' ',' ',' ',' ','|'},
     {'|','*',' ',' ',' ',' ',' ',' ',' ','|'},
     {'|',' ',' ',' ',' ',' ',' ',' ',' ','|'},
@@ -40,7 +40,7 @@ char INITIAL_MAP[11][10] = {
     {'|','*',' ',' ',' ',' ',' ',' ',' ','|'},
     {'|',' ',' ',' ',' ',' ',' ',' ','*','|'},
     {'|',' ',' ',' ',' ',' ',' ',' ',' ','|'},
-};
+};**/
 
 int INITIAL_PLAYERPOSITION[2] = {10 /**ligne*/,5 /**colonne*/};
 
