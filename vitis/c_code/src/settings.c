@@ -1,5 +1,7 @@
 #include "settings.h"
 
+int DEBUG_MODE = 1;
+
 // Définition des variables globales
 int VELOCITY_BULLETS = 2;
 int VELOCITY_PLAYER = 1;

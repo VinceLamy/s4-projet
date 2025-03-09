@@ -107,6 +107,7 @@ struct Cell* enterCell(struct Cell* self, char* imageOfEntity, enum Direction di
     self->reset_Image(self);
     if(direction != NONE)
     {
+        printf("%d", direction);
         struct Cell* p_newCell = self->get_cellInDirectionX(self, direction);
         p_newCell->set_ImageCell(p_newCell, imageOfEntity);
         return p_newCell;
