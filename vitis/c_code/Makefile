@@ -46,8 +46,10 @@ controller.o : src/controller.c lib/controller.h
 lib/includeLib.h : lib/settings.h lib/util.h
 	touch lib/includeLib.h $(LDFLAGS)
 
-
+run:
+	make clean
+	./main
 
 # Cible de nettoyage
 clean:
-	rm -f *.o main
+	rm -f *.o
