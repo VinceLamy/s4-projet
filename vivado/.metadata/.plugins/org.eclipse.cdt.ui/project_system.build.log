@@ -1,0 +1,10 @@
+12:55:42 **** Build of configuration Debug for project project_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 52388 D:/Travail/s4-projet/vivado/atelier4_wrapper/export/atelier4_wrapper/atelier4_wrapper.xpfm standalone_ps7_cortexa9_0 D:/Travail/s4-projet/vivado/project_system/Debug/system.bif
+sdcard_gen --xpfm D:/Travail/s4-projet/vivado/atelier4_wrapper/export/atelier4_wrapper/atelier4_wrapper.xpfm --sys_config atelier4_wrapper --bif D:/Travail/s4-projet/vivado/project_system/Debug/system.bif --bitstream D:/Travail/s4-projet/vivado/project/_ide/bitstream/atelier4_wrapper.bit --elf D:/Travail/s4-projet/vivado/project/Debug/project.elf,ps7_cortexa9_0
+creating BOOT.BIN using D:/Travail/s4-projet/vivado/project/_ide/bitstream/atelier4_wrapper.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image D:/Travail/s4-projet/vivado/project_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+12:55:53 Build Finished (took 11s.1ms)
+

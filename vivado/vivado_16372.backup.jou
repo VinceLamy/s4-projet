@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Mar 11 14:52:13 2025
+# Process ID: 16372
+# Current directory: D:/Travail/s4-projet/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4684 D:\Travail\s4-projet\vivado\s4InfoAtelier4.xpr
+# Log file: D:/Travail/s4-projet/vivado/vivado.log
+# Journal file: D:/Travail/s4-projet/vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Travail/s4-projet/vivado/s4InfoAtelier4.xpr
+update_compile_order -fileset sources_1

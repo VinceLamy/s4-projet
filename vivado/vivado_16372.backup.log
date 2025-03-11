@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Mar 11 14:52:13 2025
+# Process ID: 16372
+# Current directory: D:/Travail/s4-projet/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4684 D:\Travail\s4-projet\vivado\s4InfoAtelier4.xpr
+# Log file: D:/Travail/s4-projet/vivado/vivado.log
+# Journal file: D:/Travail/s4-projet/vivado\vivado.jou
+#-----------------------------------------------------------
+INFO: [Common 17-724] Xilinx Tcl Store apps are automatically updated.
+start_gui
+open_project D:/Travail/s4-projet/vivado/s4InfoAtelier4.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Travail/s4InfoAtelier4' since last save.
+Scanning sources...
+Finished scanning sources
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:zybo-z7-10:part0:1.0. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Travail/s4-projet/vivado/s4InfoAtelier4.ipdefs/mycolorRegister_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Travail/s4-projet/vivado/s4InfoAtelier4.ipdefs/pixelDataToVideoStream_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Travail/s4-projet/vivado/s4InfoAtelier4.ipdefs/rgb2dvi'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Travail/s4-projet/vivado/s4InfoAtelier4.ipdefs/tmds_v1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'atelier4.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+atelier4_clk_wiz_0_0
+atelier4_rgb2dvi_0_0
+atelier4_processing_system7_0_0
+atelier4_proc_sys_reset_0_0
+atelier4_smartconnect_0_0
+atelier4_v_proc_ss_0_0
+atelier4_smartconnect_0_1
+
+open_project: Time (s): cpu = 00:00:37 ; elapsed = 00:00:30 . Memory (MB): peak = 1115.172 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 11 14:54:22 2025...
