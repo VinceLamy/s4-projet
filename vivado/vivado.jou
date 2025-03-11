@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Mar 11 12:49:19 2025
+# Process ID: 9720
+# Current directory: D:/Travail/s4-projet/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4176 D:\Travail\s4-projet\vivado\s4InfoAtelier4.xpr
+# Log file: D:/Travail/s4-projet/vivado/vivado.log
+# Journal file: D:/Travail/s4-projet/vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+oopen_project D:/Travail/s4-projet/vivado/s4InfoAtelier4.xprupdate_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/Travail/s4-projet/vivado/s4InfoAtelier4.runs/impl_1/atelier4_wrapper.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/Travail/s4-projet/vivado/s4InfoAtelier4.runs/impl_1/atelier4_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
