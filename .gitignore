@@ -11,9 +11,8 @@
 !vivado
 
 # Ne pas ignorer les répertoires c_code, lib et src
-!vitis/c_code/
-!vitis/c_code/lib/
-!vitis/c_code/src/
+!vitis/c_code/lib
+!vitis/c_code/src
 
 # Ne pas ignorer tous les fichiers dans les répertoires lib et src
 !vitis/c_code/lib/**
@@ -23,3 +22,10 @@
 !vitis/c_code/Makefile
 
 !vitis/c_code/README.md
+
+
+#fichier Vivado
+!vivado/PPU/
+!vivado/PPU/tb_PPU_behav.wcfg
+!vivado/PPU/PPU.srcs
+!vivado/PPU/PPU.srcs/**

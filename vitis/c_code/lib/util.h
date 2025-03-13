@@ -1,5 +1,3 @@
-
-
 #ifndef UTIL_H
 #define UTIL_H
 
@@ -13,6 +11,10 @@ enum Direction
     LEFT = 3,
     NONE = 4
 };
+
+
+
+
 
 
 

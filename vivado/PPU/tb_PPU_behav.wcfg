@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_PPU_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="spaceinvaderinstructionslib" />
+            <top_module name="tb_PPU" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="203431fs"></ZoomStartTime>
+      <ZoomEndTime time="1159314fs"></ZoomEndTime>
+      <Cursor1Time time="847549fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="226"></NameColumnWidth>
+      <ValueColumnWidth column_width="122"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="group8" type="group">
+      <obj_property name="label">PPU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_PPU/s_pixel_x" type="array">
+         <obj_property name="ElementShortName">s_pixel_x[9:0]</obj_property>
+         <obj_property name="ObjectShortName">s_pixel_x[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/s_pixel_y" type="array">
+         <obj_property name="ElementShortName">s_pixel_y[9:0]</obj_property>
+         <obj_property name="ObjectShortName">s_pixel_y[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/s_instruction" type="array">
+         <obj_property name="ElementShortName">s_instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/s_dataPixel" type="array">
+         <obj_property name="ElementShortName">s_dataPixel[23:0]</obj_property>
+         <obj_property name="ObjectShortName">s_dataPixel[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/s_dataValid" type="logic">
+         <obj_property name="ElementShortName">s_dataValid</obj_property>
+         <obj_property name="ObjectShortName">s_dataValid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/clk_cycle" type="other">
+         <obj_property name="ElementShortName">clk_cycle</obj_property>
+         <obj_property name="ObjectShortName">clk_cycle</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group16" type="group">
+      <obj_property name="label">Controler</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_PPU/utt_PPU/contr/i_instruction" type="array">
+         <obj_property name="ElementShortName">i_instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">i_instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/contr/o_enableActorMGMT" type="logic">
+         <obj_property name="ElementShortName">o_enableActorMGMT</obj_property>
+         <obj_property name="ObjectShortName">o_enableActorMGMT</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/contr/o_resetActorMGMT" type="logic">
+         <obj_property name="ElementShortName">o_resetActorMGMT</obj_property>
+         <obj_property name="ObjectShortName">o_resetActorMGMT</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/contr/o_writeBackbuffer" type="logic">
+         <obj_property name="ElementShortName">o_writeBackbuffer</obj_property>
+         <obj_property name="ObjectShortName">o_writeBackbuffer</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/contr/o_resetBackbuffer" type="logic">
+         <obj_property name="ElementShortName">o_resetBackbuffer</obj_property>
+         <obj_property name="ObjectShortName">o_resetBackbuffer</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/contr/opcode" type="array">
+         <obj_property name="ElementShortName">opcode[31:29]</obj_property>
+         <obj_property name="ObjectShortName">opcode[31:29]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/contr/func" type="array">
+         <obj_property name="ElementShortName">func[28:26]</obj_property>
+         <obj_property name="ObjectShortName">func[28:26]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group21" type="group">
+      <obj_property name="label">BackgroundTileBuffer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backTileBuff/i_tuile_id" type="array">
+         <obj_property name="ElementShortName">i_tuile_id[5:0]</obj_property>
+         <obj_property name="ObjectShortName">i_tuile_id[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backTileBuff/i_tuile_x" type="array">
+         <obj_property name="ElementShortName">i_tuile_x[2:0]</obj_property>
+         <obj_property name="ObjectShortName">i_tuile_x[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backTileBuff/i_tuile_y" type="array">
+         <obj_property name="ElementShortName">i_tuile_y[2:0]</obj_property>
+         <obj_property name="ObjectShortName">i_tuile_y[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backTileBuff/o_cc" type="array">
+         <obj_property name="ElementShortName">o_cc[3:0]</obj_property>
+         <obj_property name="ObjectShortName">o_cc[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group35" type="group">
+      <obj_property name="label">BackgroundBuffer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backgroundBuff/i_clk" type="logic">
+         <obj_property name="ElementShortName">i_clk</obj_property>
+         <obj_property name="ObjectShortName">i_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backgroundBuff/i_globalX" type="array">
+         <obj_property name="ElementShortName">i_globalX[9:0]</obj_property>
+         <obj_property name="ObjectShortName">i_globalX[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backgroundBuff/i_globalY" type="array">
+         <obj_property name="ElementShortName">i_globalY[9:0]</obj_property>
+         <obj_property name="ObjectShortName">i_globalY[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backgroundBuff/i_WriteEn" type="logic">
+         <obj_property name="ElementShortName">i_WriteEn</obj_property>
+         <obj_property name="ObjectShortName">i_WriteEn</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backgroundBuff/i_WriteData" type="array">
+         <obj_property name="ElementShortName">i_WriteData[5:0]</obj_property>
+         <obj_property name="ObjectShortName">i_WriteData[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backgroundBuff/i_WriteAdress" type="other">
+         <obj_property name="ElementShortName">i_WriteAdress</obj_property>
+         <obj_property name="ObjectShortName">i_WriteAdress</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backgroundBuff/o_tuileID" type="array">
+         <obj_property name="ElementShortName">o_tuileID[5:0]</obj_property>
+         <obj_property name="ObjectShortName">o_tuileID[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backgroundBuff/o_tuileX" type="array">
+         <obj_property name="ElementShortName">o_tuileX[2:0]</obj_property>
+         <obj_property name="ObjectShortName">o_tuileX[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backgroundBuff/sReadIndex" type="other">
+         <obj_property name="ElementShortName">sReadIndex</obj_property>
+         <obj_property name="ObjectShortName">sReadIndex</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/backgroundBuff/o_tuileY" type="array">
+         <obj_property name="ElementShortName">o_tuileY[2:0]</obj_property>
+         <obj_property name="ObjectShortName">o_tuileY[2:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group24" type="group">
+      <obj_property name="label">ColorConverter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb_PPU/utt_PPU/colorConv/sel" type="array">
+         <obj_property name="ElementShortName">sel[3:0]</obj_property>
+         <obj_property name="ObjectShortName">sel[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/colorConv/rgb" type="array">
+         <obj_property name="ElementShortName">rgb[23:0]</obj_property>
+         <obj_property name="ObjectShortName">rgb[23:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group40" type="group">
+      <obj_property name="label">MonitorInstruction</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_PPU/utt_PPU/monitorInstr/i_instruction" type="array">
+         <obj_property name="ElementShortName">i_instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">i_instruction[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/monitorInstr/show_Instruction" type="other">
+         <obj_property name="ElementShortName">show_Instruction</obj_property>
+         <obj_property name="ObjectShortName">show_Instruction</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/monitorInstr/show_Function" type="other">
+         <obj_property name="ElementShortName">show_Function</obj_property>
+         <obj_property name="ObjectShortName">show_Function</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_PPU/utt_PPU/monitorInstr/flag_endgame" type="logic">
+         <obj_property name="ElementShortName">flag_endgame</obj_property>
+         <obj_property name="ObjectShortName">flag_endgame</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
