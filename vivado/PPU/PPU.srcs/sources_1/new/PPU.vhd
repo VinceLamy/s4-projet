@@ -39,6 +39,7 @@ entity PPU is
         i_pixel_x : in std_logic_vector(9 downto 0) := (others => '0');
         i_pixel_y : in std_logic_vector(9 downto 0) := (others => '0');
         i_clk : in std_logic;
+        i_resetn : in std_logic := '0';
         o_dataPixel : out std_logic_vector(23 downto 0);
         o_dataValid : out std_logic := '0'
     );

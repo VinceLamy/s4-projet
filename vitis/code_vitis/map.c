@@ -2,10 +2,10 @@
 
 
 
-struct Map* __init_Map__()
+struct Map* __init_Map__(struct Debug* debug)
 {
     struct Map* newMap = (struct Map*)malloc(sizeof(struct Map));
-
+    //printDebugCell(debug);
 
     newMap->rows = N_ROWS;
     newMap->cols = N_COLS;
@@ -22,28 +22,38 @@ struct Map* __init_Map__()
             else
             {
                 int random_number_0_99 = rand() % 100;
-                if(random_number_0_99 >= 0 && random_number_0_99 <= 5) *img = '*';
+                if(random_number_0_99 >= 0 && random_number_0_99 <= 5)
+                	{
+                		*img = '*';
+                		int y_hex = i << 13;
+						int x_hex = j << 6;
+						int instruction = BASE_INITIALISE_BACKGROUND_TILES + x_hex + y_hex;
+						MYCOLORREGISTER_mWriteReg(0x43C40000, 0, instruction);
+                	}
                 else *img = ' ';
 
             }
 
+
+
+
+
             //sprintf(img, "%c", INITIAL_MAP[i][j]);
             newMap->matrix[i][j] = __init_Cell__(img, NULL, NULL, NULL, NULL);
+            /**if(*img == '*')
+			{
 
-            int y_hex = i << 6;
-			int x_hex = j << 13;
-			int instruction = 0x08000000 + x_hex + y_hex;
 
-            char *str_instruction;
+				int y_hex = i << 6;
+				int x_hex = j << 13;
+				int instruction = BASE_TILE_ID + BASE_INITIALISE_BACKGROUND_TILES + x_hex + y_hex;
 
-            printf("%x\n", instruction);
 
-            struct timespec req = {0};
-            req.tv_sec = 0; // 1 seconde
-            req.tv_nsec = 50000000L; // 50 millisecondes (0,5 seconde)
-            nanosleep(&req, (struct timespec *)NULL);
+				MYCOLORREGISTER_mWriteReg(0x43C40000, 0, instruction);
+			}**/
 
-            
+            sleep(1);
+
         }
     }
 
@@ -87,20 +97,13 @@ void __str_Map__(struct Map* map)
 {
     for (int i = 0; i < map->rows; i++) {
         for (int j = 0; j < map->cols; j++) {
-            if(DEBUG_MODE == 0)printw("%s ", __str_Cell__(map->matrix[i][j]));
-            else
-            {
-                printf("%s ", __str_Cell__(map->matrix[i][j]));
-                
-            };
+            printf("%s ", __str_Cell__(map->matrix[i][j]));
             
         }
-        if(DEBUG_MODE == 0)printw("\n");
-        else printf("\n");
+        printf("\n");
 
         
     }
-    if(DEBUG_MODE == 0) refresh();
 
     
 }

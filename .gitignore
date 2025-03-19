@@ -8,6 +8,7 @@
 #projet vivado
 !vitis/
 !vitis/*
+!vitis/code_vitis/*
 !vivado
 
 # Ne pas ignorer les répertoires c_code, lib et src

@@ -17,7 +17,7 @@ struct Debug
 struct Debug* __init_Debug__();
 void __free_Debug__(struct Degug* self);
 
-char* getInstructionStr(struct Debug* self)
+char* getInstructionStr(struct Debug* self);
 
 
 
