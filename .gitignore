@@ -9,7 +9,8 @@
 !vitis/
 !vitis/*
 !vitis/code_vitis/*
-!vivado
+!s4InfoAtelier4.sim
+!s4InfoAtelier4.srcs
 
 # Ne pas ignorer les répertoires c_code, lib et src
 !vitis/c_code/lib
@@ -26,7 +27,10 @@
 
 
 #fichier Vivado
-!vivado/PPU/
-!vivado/PPU/tb_PPU_behav.wcfg
-!vivado/PPU/PPU.srcs
-!vivado/PPU/PPU.srcs/**
+!s4InfoAtelier4.srcs/constrs_1/
+!s4InfoAtelier4.srcs/sources_1/
+!s4InfoAtelier4.sim/sim_1/
+
+!s4InfoAtelier4.srcs/constrs_1/**
+!s4InfoAtelier4.srcs/sources_1/**
+!s4InfoAtelier4.sim/sim_1/**
