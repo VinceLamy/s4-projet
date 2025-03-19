@@ -8,11 +8,10 @@ int main()
 
 	configureScaler();
 	configureVdma();
-    struct Game* game = __init_Game__();
 
-    game->startGame(game);
-
-    __free_Game__(game); // Free the allocated memory before exiting
+    //struct Game* game = __init_Game__();
+    //game->startGame(game);
+    //__free_Game__(game); // Free the allocated memory before exiting
 
 	// Le seul changement est sur le tuileID
 	// Instruction1 = 000 010 000001 0000000 0000000 000000
@@ -27,7 +26,7 @@ int main()
 		sleep(1);
 		MYCOLORREGISTER_mWriteReg(XPAR_MYCOLORREGISTER_0_S00_AXI_BASEADDR, 0, instruction2);
 		sleep(1);
-	}**/
+	}
 
 
     return 0;
