@@ -1,9 +1,29 @@
 #include "map.h"
 
 
-
 struct Map* __init_Map__(struct Debug* debug)
 {
+	for (int i = 0; i < N_ROWS; i++)
+	{
+		for (int j = 0; j < N_COLS; j++)
+		{
+			int random_number_0_99 = rand() % 100;
+
+			if(random_number_0_99 >= 0 && random_number_0_99 <= 5)
+			{
+				int y_hex = i << 13;
+				int x_hex = j << 6;
+				int instruction = 0x8200000 + x_hex + y_hex;
+				MYCOLORREGISTER_mWriteReg(XPAR_MYCOLORREGISTER_0_S00_AXI_BASEADDR, 0, instruction);
+			}
+		}
+	}
+
+	struct Map* newMap = (struct Map*)malloc(sizeof(struct Map));
+	return newMap;
+
+
+	/*
     struct Map* newMap = (struct Map*)malloc(sizeof(struct Map));
     //printDebugCell(debug);
 
@@ -12,48 +32,22 @@ struct Map* __init_Map__(struct Debug* debug)
     newMap->matrix = (struct Cell***)malloc(N_ROWS * sizeof(struct Cell**));
 
     for (int i = 0; i < N_ROWS; i++) {
-        newMap->matrix[i] = (struct Cell**)malloc(N_COLS * sizeof(struct Cell*));
-        for (int j = 0; j < N_COLS; j++) {
+    	newMap->matrix[i] = (struct Cell**)malloc(N_COLS * sizeof(struct Cell*));
+        for (int j = 0; j < N_COLS; j++)
+        {
             char *img = (char*)malloc(20 * sizeof(char)); // Allouer de la mÃ©moire pour img
+            int random_number_0_99 = rand() % 100;
 
-            // dÃ©finition random du background
-            if(j == 0 || j == N_COLS-1) *img = '|';
-            
-            else
-            {
-                int random_number_0_99 = rand() % 100;
-                if(random_number_0_99 >= 0 && random_number_0_99 <= 5)
-                	{
-                		*img = '*';
-                		int y_hex = i << 13;
-						int x_hex = j << 6;
-						int instruction = BASE_INITIALISE_BACKGROUND_TILES + x_hex + y_hex;
-						MYCOLORREGISTER_mWriteReg(0x43C40000, 0, instruction);
-                	}
-                else *img = ' ';
-
-            }
-
-
-
-
-
-            //sprintf(img, "%c", INITIAL_MAP[i][j]);
-            newMap->matrix[i][j] = __init_Cell__(img, NULL, NULL, NULL, NULL);
-            /**if(*img == '*')
+			// Une étoile doit être affiché
+			if(random_number_0_99 >= 0 && random_number_0_99 <= 5)
 			{
+					int y_hex = i << 13;
+					int x_hex = j << 6;
+					int instruction = 0x82000000 + x_hex + y_hex;
+					MYCOLORREGISTER_mWriteReg(XPAR_MYCOLORREGISTER_0_S00_AXI_BASEADDR, 0, instruction);
+			}
 
-
-				int y_hex = i << 6;
-				int x_hex = j << 13;
-				int instruction = BASE_TILE_ID + BASE_INITIALISE_BACKGROUND_TILES + x_hex + y_hex;
-
-
-				MYCOLORREGISTER_mWriteReg(0x43C40000, 0, instruction);
-			}**/
-
-            sleep(1);
-
+			newMap->matrix[i][j] = __init_Cell__(img, NULL, NULL, NULL, NULL);
         }
     }
 
@@ -70,6 +64,7 @@ struct Map* __init_Map__(struct Debug* debug)
     }
 
     return newMap;
+    */
 }
 
 
