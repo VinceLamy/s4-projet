@@ -44,8 +44,12 @@ void startGame(struct Game* self)
 
     enum Direction direction;
 
-    system("clear");
-    clear();
+    if(DEBUG_MODE == 0)
+    {
+        system("clear");
+        clear(); 
+    }
+    
     __str_Map__(self->map);
     while(!controller->quit)
     {
@@ -58,8 +62,12 @@ void startGame(struct Game* self)
             if(controller->down) player->move_Player(player, DOWN);
             if(controller->left) player->move_Player(player, LEFT);
 
-            system("clear");
-            clear();
+
+                if(DEBUG_MODE == 0)
+                {
+                    system("clear");
+                    clear(); 
+                }
             __str_Map__(self->map);
         }
 

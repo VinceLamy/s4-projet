@@ -1,6 +1,8 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
+
+extern int DEBUG_MODE;
 // Déclaration des variables globales
 extern int VELOCITY_BULLETS;
 extern int VELOCITY_PLAYER;

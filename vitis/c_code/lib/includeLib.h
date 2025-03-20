@@ -11,6 +11,7 @@
 #include "util.h"
 #include "settings.h"
 #include <ncurses.h>
+#include "debug.h"
 
 
 

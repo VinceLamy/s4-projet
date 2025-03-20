@@ -1,7 +1,5 @@
 #include "map.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h> // Pour memcpy
+
 
 
 struct Map* __init_Map__()
@@ -17,9 +15,35 @@ struct Map* __init_Map__()
         newMap->matrix[i] = (struct Cell**)malloc(N_COLS * sizeof(struct Cell*));
         for (int j = 0; j < N_COLS; j++) {
             char *img = (char*)malloc(20 * sizeof(char)); // Allouer de la mémoire pour img
-            sprintf(img, "%c", INITIAL_MAP[i][j]);
+
+            // définition random du background
+            if(j == 0 || j == N_COLS-1) *img = '|';
+            
+            else
+            {
+                int random_number_0_99 = rand() % 100;
+                if(random_number_0_99 >= 0 && random_number_0_99 <= 5) *img = '*';
+                else *img = ' ';
+
+            }
+
+            //sprintf(img, "%c", INITIAL_MAP[i][j]);
             newMap->matrix[i][j] = __init_Cell__(img, NULL, NULL, NULL, NULL);
 
+            int y_hex = i << 6;
+			int x_hex = j << 13;
+			int instruction = 0x08000000 + x_hex + y_hex;
+
+            char *str_instruction;
+
+            printf("%x\n", instruction);
+
+            struct timespec req = {0};
+            req.tv_sec = 0; // 1 seconde
+            req.tv_nsec = 50000000L; // 50 millisecondes (0,5 seconde)
+            nanosleep(&req, (struct timespec *)NULL);
+
+            
         }
     }
 
@@ -63,10 +87,21 @@ void __str_Map__(struct Map* map)
 {
     for (int i = 0; i < map->rows; i++) {
         for (int j = 0; j < map->cols; j++) {
-            printw("%s ", __str_Cell__(map->matrix[i][j]));
+            if(DEBUG_MODE == 0)printw("%s ", __str_Cell__(map->matrix[i][j]));
+            else
+            {
+                printf("%s ", __str_Cell__(map->matrix[i][j]));
+                
+            };
+            
         }
-        printw("\n");
+        if(DEBUG_MODE == 0)printw("\n");
+        else printf("\n");
+
+        
     }
-    refresh();
+    if(DEBUG_MODE == 0) refresh();
+
+    
 }
 
